@@ -27,7 +27,3 @@ python run_financial_warmstart_study.py
 # 2. 執行五大 QAOA 架構（Standard vs. Pure CVaR vs. Warm-Start vs. Hybrid vs. R-QAOA）同場基準測試
 python run_full_3way_benchmark.py
 ```
-
-## 團隊延伸對接
-- **量子適用性健檢工具（Web / Colab）**：[johnny-0120/quantum-fit-check](https://github.com/johnny-0120/quantum-fit-check)
-- **R-QAOA 失敗診斷與應用實測**：[johnny-0120/rqaoa-applications](https://github.com/johnny-0120/rqaoa-applications)
