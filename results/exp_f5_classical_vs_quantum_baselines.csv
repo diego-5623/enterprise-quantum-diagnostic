@@ -1,0 +1,67 @@
+market,method,ar,p_opt,runtime_ms,seed
+TW-Core-12 (Full 2Y),Classical Exact Brute-Force,1.0,1.0,1.8868999904952943,
+TW-Core-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000002,1.0,3.9191999821923673,42.0
+TW-Core-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,65.27860002825037,42.0
+TW-Core-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000004,1.0,2.2624999983236194,43.0
+TW-Core-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,10.308699973393232,43.0
+TW-Core-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000002,1.0,2.2519000340253115,44.0
+TW-Core-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.603000013157725,44.0
+TW-Core-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000002,1.0,2.3105000145733356,45.0
+TW-Core-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.365600009914488,45.0
+TW-Core-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000004,1.0,2.2371000377461314,46.0
+TW-Core-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.270599985029548,46.0
+TW-Core-12 (H2 Window),Classical Exact Brute-Force,1.0,1.0,0.4852000274695456,
+TW-Core-12 (H2 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.2270999616011977,42.0
+TW-Core-12 (H2 Window),Classical GW-SDP (p=0),1.0,1.0,10.139699967112392,42.0
+TW-Core-12 (H2 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.2173000033944845,43.0
+TW-Core-12 (H2 Window),Classical GW-SDP (p=0),1.0,1.0,10.144200001377612,43.0
+TW-Core-12 (H2 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.336100034881383,44.0
+TW-Core-12 (H2 Window),Classical GW-SDP (p=0),1.0,1.0,9.937599999830127,44.0
+TW-Core-12 (H2 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.2600999800488353,45.0
+TW-Core-12 (H2 Window),Classical GW-SDP (p=0),1.0,1.0,10.820599971339107,45.0
+TW-Core-12 (H2 Window),Classical Simulated Annealing,1.0,1.0,2.1883000154048204,46.0
+TW-Core-12 (H2 Window),Classical GW-SDP (p=0),1.0,1.0,10.228200000710785,46.0
+TW-Semi-Def-10,Classical Exact Brute-Force,1.0,1.0,0.229199999012053,
+TW-Semi-Def-10,Classical Simulated Annealing,1.0000000000000002,1.0,2.2320999996736646,42.0
+TW-Semi-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.65249999333173,42.0
+TW-Semi-Def-10,Classical Simulated Annealing,1.0000000000000002,1.0,2.2501000203192234,43.0
+TW-Semi-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.476499991957098,43.0
+TW-Semi-Def-10,Classical Simulated Annealing,1.0000000000000002,1.0,2.2557000047527254,44.0
+TW-Semi-Def-10,Classical GW-SDP (p=0),1.0,1.0,9.179599990602583,44.0
+TW-Semi-Def-10,Classical Simulated Annealing,1.0000000000000002,1.0,2.236100030131638,45.0
+TW-Semi-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.675099990796298,45.0
+TW-Semi-Def-10,Classical Simulated Annealing,1.0000000000000002,1.0,2.3919999948702753,46.0
+TW-Semi-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.509800012689084,46.0
+US-Macro-12 (Full 2Y),Classical Exact Brute-Force,1.0,1.0,0.5775000317953527,
+US-Macro-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000002,1.0,2.2259000106714666,42.0
+US-Macro-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.875799994915724,42.0
+US-Macro-12 (Full 2Y),Classical Simulated Annealing,1.0,1.0,2.189599967096001,43.0
+US-Macro-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.31639998452738,43.0
+US-Macro-12 (Full 2Y),Classical Simulated Annealing,1.0,1.0,2.226599957793951,44.0
+US-Macro-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.241899999324232,44.0
+US-Macro-12 (Full 2Y),Classical Simulated Annealing,1.0,1.0,2.25499999942258,45.0
+US-Macro-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.606899984646589,45.0
+US-Macro-12 (Full 2Y),Classical Simulated Annealing,1.0000000000000002,1.0,2.1969000226818025,46.0
+US-Macro-12 (Full 2Y),Classical GW-SDP (p=0),1.0,1.0,9.393199987243861,46.0
+US-Macro-12 (H1 Window),Classical Exact Brute-Force,1.0,1.0,0.5868999869562685,
+US-Macro-12 (H1 Window),Classical Simulated Annealing,1.0,1.0,2.3841000511310995,42.0
+US-Macro-12 (H1 Window),Classical GW-SDP (p=0),1.0,1.0,9.601099998690188,42.0
+US-Macro-12 (H1 Window),Classical Simulated Annealing,1.0,1.0,2.264200011268258,43.0
+US-Macro-12 (H1 Window),Classical GW-SDP (p=0),1.0,1.0,10.631300043314695,43.0
+US-Macro-12 (H1 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.377500000875443,44.0
+US-Macro-12 (H1 Window),Classical GW-SDP (p=0),1.0,1.0,10.614800034090877,44.0
+US-Macro-12 (H1 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.329199982341379,45.0
+US-Macro-12 (H1 Window),Classical GW-SDP (p=0),1.0,1.0,10.262399970088154,45.0
+US-Macro-12 (H1 Window),Classical Simulated Annealing,1.0000000000000002,1.0,2.238199987914413,46.0
+US-Macro-12 (H1 Window),Classical GW-SDP (p=0),1.0,1.0,9.011499991174787,46.0
+US-Tech-Def-10,Classical Exact Brute-Force,1.0,1.0,0.2590999938547611,
+US-Tech-Def-10,Classical Simulated Annealing,0.9999999999999997,1.0,2.283399982843548,42.0
+US-Tech-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.241500006988645,42.0
+US-Tech-Def-10,Classical Simulated Annealing,0.9999999999999999,1.0,2.169300045352429,43.0
+US-Tech-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.188300009351224,43.0
+US-Tech-Def-10,Classical Simulated Annealing,0.9999999999999999,1.0,2.2646000143140554,44.0
+US-Tech-Def-10,Classical GW-SDP (p=0),1.0,1.0,8.204299956560135,44.0
+US-Tech-Def-10,Classical Simulated Annealing,0.9999999999999999,1.0,2.2422000183723867,45.0
+US-Tech-Def-10,Classical GW-SDP (p=0),1.0,1.0,13.944499951321632,45.0
+US-Tech-Def-10,Classical Simulated Annealing,0.9999999999999999,1.0,4.0200999937951565,46.0
+US-Tech-Def-10,Classical GW-SDP (p=0),1.0,1.0,9.631399996578693,46.0

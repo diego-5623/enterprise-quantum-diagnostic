@@ -15,6 +15,7 @@
 ├── qaoa_core.py                                 # Goemans-Williamson SDP 熱啟動、對齊混合器與 IBM 雜訊模型
 ├── run_financial_warmstart_study.py             # Yahoo Finance 台美股真實資料抓取、6 網路評測、Regime Shift 與 Markowitz QUBO
 ├── run_full_3way_benchmark.py                   # 5 大 QAOA 範式（Standard / Pure CVaR / Warm-Start / Hybrid / R-QAOA）同場實測
+├── run_diagnostic_validation_upgrades.py        # 強古典基準（模擬退火/SDP）、真實跨期突變（H1→H2）與 IBM Heavy-Hex 拓撲轉譯驗證
 └── results/                                     # 實跑數據 CSV 與 300-DPI 圖表（results/plots/）
 ```
 
@@ -26,4 +27,7 @@ python run_financial_warmstart_study.py
 
 # 2. 執行五大 QAOA 架構（Standard vs. Pure CVaR vs. Warm-Start vs. Hybrid vs. R-QAOA）同場基準測試
 python run_full_3way_benchmark.py
+
+# 3. 執行強古典基準對照、真實跨期（H1→H2）與 IBM Heavy-Hex 19 量子位元拓撲驗證
+python run_diagnostic_validation_upgrades.py
 ```
