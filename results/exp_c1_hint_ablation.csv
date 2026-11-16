@@ -1,0 +1,73 @@
+market,method,seed,ar,p_opt,hit_in_4096
+TW-Core-12,Classical: uniform random sampling,-1,,0.00048828125,0.864730803822396
+TW-Core-12,Cold-start QAOA p=1,42,0.6826322343764927,0.026204990319319353,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | QAOA p=1,42,0.9402667932316686,0.7263651213213644,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),42,1.0,1.0,1.0
+TW-Core-12,WS hint = single greedy pass | QAOA p=1,42,0.9402667865712724,0.7263830135792778,1.0
+TW-Core-12,WS hint = single greedy pass | hint alone (no QAOA),42,1.0,1.0,1.0
+TW-Core-12,WS hint = random bits (no information) | QAOA p=1,42,0.6368470287588769,0.0014551957185302312,0.9974325002375666
+TW-Core-12,WS hint = random bits (no information) | hint alone (no QAOA),42,0.5286720339069672,0.0,0.0
+TW-Core-12,Cold-start QAOA p=1,43,0.6826322269098604,0.026212319159564585,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | QAOA p=1,43,0.940266773922265,0.7263449678840688,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),43,1.0,1.0,1.0
+TW-Core-12,WS hint = single greedy pass | QAOA p=1,43,0.8195536962286178,0.24449301097420026,1.0
+TW-Core-12,WS hint = single greedy pass | hint alone (no QAOA),43,0.8197976893383168,0.0,0.0
+TW-Core-12,WS hint = random bits (no information) | QAOA p=1,43,0.6577246563967406,0.007045263529456421,0.9999999999997351
+TW-Core-12,WS hint = random bits (no information) | hint alone (no QAOA),43,0.6051637258142001,0.0,0.0
+TW-Core-12,Cold-start QAOA p=1,44,0.6826322349414505,0.02621648273178753,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | QAOA p=1,44,0.9402667939503353,0.7263740449176131,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),44,1.0,1.0,1.0
+TW-Core-12,WS hint = single greedy pass | QAOA p=1,44,0.9402667934758601,0.72633899554415,1.0
+TW-Core-12,WS hint = single greedy pass | hint alone (no QAOA),44,1.0,1.0,1.0
+TW-Core-12,WS hint = random bits (no information) | QAOA p=1,44,0.6365261854506548,0.0014827101977469925,0.9977065265245527
+TW-Core-12,WS hint = random bits (no information) | hint alone (no QAOA),44,0.5300348541271308,0.0,0.0
+TW-Core-12,Cold-start QAOA p=1,45,0.6826322341116492,0.026204999966203447,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | QAOA p=1,45,0.9402667932918183,0.7263564049764265,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),45,1.0,1.0,1.0
+TW-Core-12,WS hint = single greedy pass | QAOA p=1,45,0.9402667932918183,0.7263564049764265,1.0
+TW-Core-12,WS hint = single greedy pass | hint alone (no QAOA),45,1.0,1.0,1.0
+TW-Core-12,WS hint = random bits (no information) | QAOA p=1,45,0.6404961080848157,0.002048171129469592,0.9997746626771098
+TW-Core-12,WS hint = random bits (no information) | hint alone (no QAOA),45,0.5112892619987803,0.0,0.0
+TW-Core-12,Cold-start QAOA p=1,46,0.6826322346297291,0.026204013320259487,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | QAOA p=1,46,0.9402667924564269,0.7263498772376856,1.0
+TW-Core-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),46,1.0,1.0,1.0
+TW-Core-12,WS hint = single greedy pass | QAOA p=1,46,0.9402667845416603,0.7262999963942454,1.0
+TW-Core-12,WS hint = single greedy pass | hint alone (no QAOA),46,1.0,1.0,1.0
+TW-Core-12,WS hint = random bits (no information) | QAOA p=1,46,0.6838111779586081,0.02346395873441039,1.0
+TW-Core-12,WS hint = random bits (no information) | hint alone (no QAOA),46,0.5912084467597247,0.0,0.0
+US-Macro-12,Classical: uniform random sampling,-1,,0.00048828125,0.864730803822396
+US-Macro-12,Cold-start QAOA p=1,42,0.7027817630392211,0.018967821794252764,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | QAOA p=1,42,0.9463670519174351,0.7056235535902703,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),42,1.0,1.0,1.0
+US-Macro-12,WS hint = single greedy pass | QAOA p=1,42,0.887882156018699,0.1875171189690228,1.0
+US-Macro-12,WS hint = single greedy pass | hint alone (no QAOA),42,0.9265353718579944,0.0,0.0
+US-Macro-12,WS hint = random bits (no information) | QAOA p=1,42,0.667346090966672,0.0016441655475507159,0.9988174054426098
+US-Macro-12,WS hint = random bits (no information) | hint alone (no QAOA),42,0.6036998646742104,0.0,0.0
+US-Macro-12,Cold-start QAOA p=1,43,0.7027817656427251,0.01896727118174534,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | QAOA p=1,43,0.9463670545224923,0.7056353533698954,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),43,1.0,1.0,1.0
+US-Macro-12,WS hint = single greedy pass | QAOA p=1,43,0.8049174750852834,0.05316478862848571,1.0
+US-Macro-12,WS hint = single greedy pass | hint alone (no QAOA),43,0.7859030837004405,0.0,0.0
+US-Macro-12,WS hint = random bits (no information) | QAOA p=1,43,0.6667466171193903,0.0016924098355286354,0.9990297757225493
+US-Macro-12,WS hint = random bits (no information) | hint alone (no QAOA),43,0.5982378854625551,0.0,0.0
+US-Macro-12,Cold-start QAOA p=1,44,0.7027817581069851,0.01896092418500208,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | QAOA p=1,44,0.946367052946159,0.7056292344092018,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),44,1.0,1.0,1.0
+US-Macro-12,WS hint = single greedy pass | QAOA p=1,44,0.9463670522446257,0.7056752414253734,1.0
+US-Macro-12,WS hint = single greedy pass | hint alone (no QAOA),44,1.0,1.0,1.0
+US-Macro-12,WS hint = random bits (no information) | QAOA p=1,44,0.6599942623601179,0.0024182744429100777,0.9999506833236325
+US-Macro-12,WS hint = random bits (no information) | hint alone (no QAOA),44,0.53574904264202,0.0,0.0
+US-Macro-12,Cold-start QAOA p=1,45,0.702781765056494,0.01897227358816092,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | QAOA p=1,45,0.9463670518357495,0.7056244298623664,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),45,1.0,1.0,1.0
+US-Macro-12,WS hint = single greedy pass | QAOA p=1,45,0.8233623354517718,0.0614395145844056,1.0
+US-Macro-12,WS hint = single greedy pass | hint alone (no QAOA),45,0.8398980737669518,0.0,0.0
+US-Macro-12,WS hint = random bits (no information) | QAOA p=1,45,0.6603261072025217,0.001072522534965227,0.9876661752699101
+US-Macro-12,WS hint = random bits (no information) | hint alone (no QAOA),45,0.4791108807693415,0.0,0.0
+US-Macro-12,Cold-start QAOA p=1,46,0.7027817583693571,0.018970725322279027,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | QAOA p=1,46,0.9463670511672948,0.705675622007406,1.0
+US-Macro-12,WS hint = exact optimum (original setup) | hint alone (no QAOA),46,1.0,1.0,1.0
+US-Macro-12,WS hint = single greedy pass | QAOA p=1,46,0.9463670259612109,0.7056822657223966,1.0
+US-Macro-12,WS hint = single greedy pass | hint alone (no QAOA),46,1.0,1.0,1.0
+US-Macro-12,WS hint = random bits (no information) | QAOA p=1,46,0.6881760165208091,0.007315603245141577,0.9999999999999132
+US-Macro-12,WS hint = random bits (no information) | hint alone (no QAOA),46,0.5642336817252598,0.0,0.0

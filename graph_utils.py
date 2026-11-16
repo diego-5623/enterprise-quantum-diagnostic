@@ -5,7 +5,6 @@ Aligned with NTU IBM Qiskit Hackathon Group 9 Benchmark & Warm-Start QAOA Extens
 
 import numpy as np
 import networkx as nx
-from itertools import combinations
 
 
 def generate_eight_graph_families(n: int = 10, seed: int = 42) -> dict[str, nx.Graph]:
@@ -16,39 +15,26 @@ def generate_eight_graph_families(n: int = 10, seed: int = 42) -> dict[str, nx.G
     3. Cycle Graph
     4. Tree Graph (Random Prüfer / degree-varied tree)
     5. Complete Graph
-    6. Bipartite Graph (Balanced 5-5 with dense edge probability p=0.7)
+    6. Bipartite Graph (Balanced 5-5 with dense edge probability p=0.75)
     7. Community Graph (Stochastic Block Model, two communities of 5)
     8. Random Graph (Erdős-Rényi G(n, p=0.5))
     """
-    rng = np.random.default_rng(seed)
     graphs = {}
 
-    # 1. Path Graph
     graphs["Path"] = nx.path_graph(n)
-
-    # 2. Star Graph
     graphs["Star"] = nx.star_graph(n - 1)
-
-    # 3. Cycle Graph
     graphs["Cycle"] = nx.cycle_graph(n)
-
-    # 4. Tree Graph
     graphs["Tree"] = nx.random_labeled_tree(n, seed=seed)
-
-    # 5. Complete Graph
     graphs["Complete"] = nx.complete_graph(n)
 
-    # 6. Balanced Bipartite Graph (5 vs 5, edge prob = 0.7 -> where Standard QAOA struggles)
     n1 = n // 2
     n2 = n - n1
     G_bip = nx.bipartite.random_graph(n1, n2, p=0.75, seed=seed)
     if not nx.is_connected(G_bip):
-        # Ensure connectivity
         for i in range(n1):
             G_bip.add_edge(i, n1 + (i % n2))
     graphs["Bipartite"] = G_bip
 
-    # 7. Community Graph (2 communities of size n/2, intra-p=0.8, inter-p=0.2)
     sizes = [n // 2, n - n // 2]
     probs = [[0.8, 0.25], [0.25, 0.8]]
     G_comm = nx.stochastic_block_model(sizes, probs, seed=seed)
@@ -56,7 +42,6 @@ def generate_eight_graph_families(n: int = 10, seed: int = 42) -> dict[str, nx.G
         G_comm.add_edge(0, n // 2)
     graphs["Community"] = G_comm
 
-    # 8. Random Graph (Erdős-Rényi)
     G_rand = nx.erdos_renyi_graph(n, p=0.5, seed=seed)
     while not nx.is_connected(G_rand):
         seed += 1
@@ -75,11 +60,10 @@ def solve_exact_maxcut(G: nx.Graph) -> dict:
                     Note: Qiskit uses little-endian bit ordering where qubit i corresponds to bit (state >> i) & 1.
         opt_mask: Boolean mask of shape (2^n,) where cut_values == c_max
         degeneracy: Number of optimal bitstrings D = #{x : C(x) = C_max}
-        best_bitstring: One optimal bit assignments array of shape (n,) in {0, 1}
+        best_bits: One optimal bit assignments array of shape (n,) in {0, 1}
     """
     n = G.number_of_nodes()
     states = np.arange(1 << n, dtype=np.uint32)
-    # bits[i, s] = bit value of node i in state s (little-endian to match Qiskit statevector index)
     bits = ((states[None, :] >> np.arange(n, dtype=np.uint32)[:, None]) & 1).astype(np.int8)
 
     cut_values = np.zeros(1 << n, dtype=np.float64)
@@ -109,7 +93,7 @@ def compute_graph_metrics(G: nx.Graph, exact_info: dict = None) -> dict:
     2. Degree Variance = Var(deg(v))
     3. Clustering Coefficient = 3 * #triangles / sum_v binom(deg(v), 2)
     4. Odd-cycle Structure (#triangles)
-    5. Symmetry = (n - #orbits) / (n - 1)
+    5. Symmetry = (n - #orbits) / (n - 1) via exact automorphism orbit pinning
     6. Optimal-solution Degeneracy D = #{x : C(x) = C_max}
     """
     n = G.number_of_nodes()
@@ -123,8 +107,8 @@ def compute_graph_metrics(G: nx.Graph, exact_info: dict = None) -> dict:
     num_triangles = int(sum(tri_dict.values()) // 3)
     clustering_coeff = float(nx.transitivity(G))
 
-    # Compute automorphism orbits for Symmetry = (n - #orbits) / (n - 1)
-    gm = nx.algorithms.isomorphism.GraphMatcher(G, G)
+    # Exact automorphism orbits: u ~ v iff some automorphism maps u -> v.
+    # (Pin u in one copy and v in the other, then test isomorphism.)
     parent = list(range(n))
 
     def find(x):
@@ -133,19 +117,18 @@ def compute_graph_metrics(G: nx.Graph, exact_info: dict = None) -> dict:
             x = parent[x]
         return x
 
-    def union(a, b):
-        ra, rb = find(a), find(b)
-        if ra != rb:
-            parent[ra] = rb
-
-    # Limit automorphism enumeration for speed on complete/symmetric graphs
-    max_isos = 500
-    for count, iso in enumerate(gm.isomorphisms_iter()):
-        for u, v in iso.items():
-            union(u, v)
-        if count >= max_isos:
-            break
-    num_orbits = len(set(find(i) for i in range(n)))
+    nodes = list(G.nodes())
+    deg = dict(G.degree())
+    for i, u in enumerate(nodes):
+        for v in nodes[i + 1:]:
+            if find(u) == find(v) or deg[u] != deg[v]:
+                continue
+            G1, G2 = G.copy(), G.copy()
+            nx.set_node_attributes(G1, {x: int(x == u) for x in nodes}, "pin")
+            nx.set_node_attributes(G2, {x: int(x == v) for x in nodes}, "pin")
+            if nx.is_isomorphic(G1, G2, node_match=lambda a, b: a["pin"] == b["pin"]):
+                parent[find(u)] = find(v)
+    num_orbits = len(set(find(i) for i in nodes))
     symmetry = float(n - num_orbits) / (n - 1) if n > 1 else 0.0
 
     if exact_info is None:
