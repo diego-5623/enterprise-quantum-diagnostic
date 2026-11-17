@@ -21,7 +21,7 @@
 ├── tests/test_core.py                           # 核心單元測試（Symmetry / MaxCut / Warm-Start 邊界）
 ├── requirements.txt                             # Python 套件版本需求
 ├── LICENSE                                      # MIT License
-└── results/                                     # 實跑數據 CSV 與圖表（results/plots/）
+└── results/                                     # 實跑數據 CSV（含 Demo 用邊清單 tw_core_12_edges.csv）與圖表
 ```
 
 ## 重現實測與測試（PowerShell / Bash）
